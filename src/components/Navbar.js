@@ -18,7 +18,8 @@ export default function Navbar() {
         <Link to="/categories" className={isActive('/categories')}>Categories</Link>
         <Link to="/payment-methods" className={isActive('/payment-methods')}>Payment Methods</Link>
       </div>
-      <div aria-label='button-logout' onClick={logout}>Logout</div>
+      {/* <div aria-label='button-logout' onClick={logout}>Logout</div> */}
+      <button aria-label='button-logout' onClick={logout}>Logout</button>
     </nav>
   );
 }

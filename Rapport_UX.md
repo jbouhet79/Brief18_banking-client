@@ -239,6 +239,12 @@ return (
 )
 ````
 
+## Clarification de l'identification du bouton de déconnexion
+Remplacement de la balise div par button pour améliorer la compréhension du contenu
+````
+<button aria-label='button-logout' onClick={logout}>Logout</button>
+````
+
 ## Indicateurs de réussite
 
 | Fonctionnalité | Taux de réussite | Temps moyen de réalisation |
