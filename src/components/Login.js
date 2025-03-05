@@ -15,14 +15,13 @@ export default function Login() {
     e.preventDefault();
     setAuthLoading(true);
     setError('');
-    
-    const success = isLogin 
+
+    isLogin
       ? await login(username, password)
-      : await register(username, password);
-    
-    if (!success) {
-      setError(isLogin ? 'Login failed' : 'Registration failed');
-    }
+        .catch(() => setError('Login failed. Aucun utilisateur n\'est connu avec cet identifiant et/ou ce mot de passe. Pensez à vous enregistrer si vous ne possédez pas de compte'))
+      : await register(username, password)
+        .catch(() => setError('Registration failed'));
+
     setAuthLoading(false);
 
   }, [isLogin, username, password, login, register, setAuthLoading]);

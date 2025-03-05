@@ -60,3 +60,20 @@
 .modal-body button[type="submit"]:hover {
   background-color: #0056b3;
 }
+
+@media (max-width: 480px) {
+  .modal-content {
+    min-width: 50px;
+    max-width: 300px;
+    width: 90%;
+  }
+
+  h3,
+  .modal-body input,
+  .modal-body select,
+  .modal-body textarea,
+  .modal-body button {
+    font-size: 0.8rem;
+  }
+}
+
