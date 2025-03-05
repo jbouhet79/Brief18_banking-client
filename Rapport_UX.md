@@ -267,7 +267,7 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   cursor: pointer;
 }
 ```
-Modification des couleurs prédénies dans l'api pour les catégories des achats:
+Modification des couleurs prédéfinies dans l'api pour les catégories des achats:
 ```
   useEffect(() => {
     getCategories(auth).then(categories => {

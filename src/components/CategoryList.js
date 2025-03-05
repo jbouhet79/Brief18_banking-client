@@ -43,7 +43,7 @@ export default function CategoryList() {
 
   useEffect(() => {
     getCategories(auth).then(categories => {
-      // Modifier des couleurs pour 
+      // Modifier des couleurs pour améliorer l'expérience UX
       const updatedCategories = categories.map(category => {
         switch (category.name) {
           case 'Food':
