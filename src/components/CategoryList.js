@@ -42,15 +42,15 @@ export default function CategoryList() {
   };
 
   return (
-    <div className="category-list">
+    <div aria-label='category-list' className="category-list">
       <h2>Categories</h2>
       <button className="fab-button" onClick={() => setShowNewForm(true)}>+</button>
       
-      <div className="categories">
+      <div aria-label='categories' className="categories">
         {categories.map(category => (
           <div key={category.id} className="category-item" style={{ backgroundColor: category.color }}>
-            <div className="category-content">
-              <div className="category-name">{category.name}</div>
+            <div aria-label='category-content' className="category-content">
+              <div aria-label='category-name' className="category-name">{category.name}</div>
               {category.limit && <div className="category-limit">Limit: ${category.limit}</div>}
             </div>
             <button 

@@ -5,13 +5,13 @@ export default function Modal({ isOpen, onClose, title, children }) {
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay">
-      <div className="modal-content">
-        <div className="modal-header">
+    <div aria-label='modal-overlay' className="modal-overlay">
+      <div aria-label='modal-content' className="modal-content">
+        <div aria-label='modal-header' className="modal-header">
           <h3>{title}</h3>
           <button className="modal-close" onClick={onClose}>&times;</button>
         </div>
-        <div className="modal-body">
+        <div aria-label='modal-body' className="modal-body">
           {children}
         </div>
       </div>

@@ -12,13 +12,13 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="nav-brand">Finance Tracker</div>
-      <div className="nav-links">
+      <div aria-label='nav-brand' className="nav-brand">Finance Tracker</div>
+      <div aria-label='nav links' className="nav-links">
         <Link to="/" className={isActive('/')}>Transactions</Link>
         <Link to="/categories" className={isActive('/categories')}>Categories</Link>
         <Link to="/payment-methods" className={isActive('/payment-methods')}>Payment Methods</Link>
       </div>
-      <div onClick={logout}>Logout</div>
+      <div aria-label='button-logout' onClick={logout}>Logout</div>
     </nav>
   );
 }

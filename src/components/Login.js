@@ -27,7 +27,7 @@ export default function Login() {
   }, [isLogin, username, password, login, register, setAuthLoading]);
 
   return (
-    <div className="login-container">
+    <div aria-label='login-container' className="login-container">
       <h2>{isLogin ? 'Login' : 'Register'}</h2>
       {error && <div className="error">{error}</div>}
       {authLoading && <Loader />}

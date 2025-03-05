@@ -200,6 +200,45 @@ TODO:
 - gérer l'authenfication avec un useAuth
 ___
 
+### Autres améliorations
+**Ajout d'aria-label**
+
+Pour expliciter les div. Exemple :
+````
+return (
+<nav className="navbar">
+    <div aria-label='nav-brand' className="nav-brand">Finance Tracker</div>
+    <div aria-label='nav links' className="nav-links">
+    <Link to="/" className={isActive('/')}>Transactions</Link>
+    <Link to="/categories" className={isActive('/categories')}>Categories</Link>
+    <Link to="/payment-methods" className={isActive('/payment-methods')}>Payment Methods</Link>
+    </div>
+    <div aria-label='button-logout' onClick={logout}>Logout</div>
+</nav>
+);
+
+<div aria-label='login-container' className="login-container">
+
+
+return (
+    <div aria-label='category-list' className="category-list">
+      <h2>Categories</h2>
+      <button className="fab-button" onClick={() => setShowNewForm(true)}>+</button>
+      
+    <div aria-label='categories' className="categories">
+        {categories.map(category => (
+            <div key={category.id} className="category-item" style={{ backgroundColor: category.color }}>
+            <div aria-label='category-content' className="category-content">
+              <div aria-label='category-name' className="category-name">{category.name}</div>
+              {category.limit && <div className="category-limit">Limit: ${category.limit}</div>}
+            </div>
+            ...
+        )
+        )
+    }
+)
+````
+
 ## Indicateurs de réussite
 
 | Fonctionnalité | Taux de réussite | Temps moyen de réalisation |

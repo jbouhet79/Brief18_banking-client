@@ -74,22 +74,22 @@ export default function TransactionList() {
   };
 
   return (
-    <div className="transaction-list">
+    <div aria-label='transaction-list' className="transaction-list">
       <h2>Transactions</h2>
       <button className="fab-button" onClick={() => setShowNewForm(true)}>+</button>
       
       {Object.entries(groupedTransactions).map(([date, transactions]) => (
-        <div key={date} className="date-group">
+        <div aria-label='date-group' key={date} className="date-group">
           <h3>{date}</h3>
           {transactions.map(transaction => (
-            <div key={transaction.id} className="transaction-item">
+            <div aria-label='transaction-item' key={transaction.id} className="transaction-item">
               <div 
                 className="category-color-indicator"
                 style={{ backgroundColor: getCategoryColor(transaction.categoryId) }}
               />
               <div className="transaction-content">
-                <div className="transaction-title">{transaction.title}</div>
-                <div className="transaction-amount">{formatAmount(transaction.amount)}€</div>
+                <div aria-label='transaction-title' className="transaction-title">{transaction.title}</div>
+                <div aria-label='transaction-amount' className="transaction-amount">{formatAmount(transaction.amount)}€</div>
               </div>
             </div>
           ))}

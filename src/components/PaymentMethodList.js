@@ -41,16 +41,16 @@ export default function PaymentMethodList() {
   };
 
   return (
-    <div className="payment-method-list">
+    <div aria-label='payment-method-list' className="payment-method-list">
       <h2>Payment Methods</h2>
       <button className="fab-button" onClick={() => setShowNewForm(true)}>+</button>
       
-      <div className="payment-methods">
+      <div aria-label='payment-methods' className="payment-methods">
         {paymentMethods.map(method => (
-          <div key={method.id} className="payment-method-item">
-            <div className="method-content">
-              <div className="method-name">{method.name}</div>
-              <div className="method-digits">**** **** **** {method.lastDigits}</div>
+          <div aria-label='payment-method-item' key={method.id} className="payment-method-item">
+            <div aria-label='method-content' className="method-content">
+              <div aria-label='method-name' className="method-name">{method.name}</div>
+              <div aria-label='method-digits' className="method-digits">**** **** **** {method.lastDigits}</div>
             </div>
             <button 
               className="delete-button"
