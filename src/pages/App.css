@@ -272,7 +272,7 @@ textarea {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background-color: #007bff;
+  background-color: #00438F;
   color: white;
   border: none;
   font-size: 24px;
@@ -302,6 +302,12 @@ textarea {
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
+
+.category-item.red { background-color: red; }
+.category-item.blue { background-color: blue; }
+.category-item.green { background-color: green; }
+.category-item.yellow { background-color: yellow; }
+.category-item.pink { background-color: pink; }
 
 .category-name,
 .method-name {
@@ -340,7 +346,8 @@ main {
 
   .category-item,
   .payment-method-item {
-    background-color: blue;
+    background-color:#00438F;
+    color: white;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   }

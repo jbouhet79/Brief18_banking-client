@@ -41,6 +41,29 @@ export default function CategoryList() {
     }
   };
 
+  useEffect(() => {
+    getCategories(auth).then(categories => {
+      // Modifier des couleurs pour 
+      const updatedCategories = categories.map(category => {
+        switch (category.name) {
+          case 'Food':
+            return { ...category, color: '#991900' }; // Nouvelle couleur pour Food
+          case 'Transport':
+            return { ...category, color: '#00660F' }; // Nouvelle couleur pour Transport
+          case 'Bills':
+            return { ...category, color: '#002BF5' }; // Nouvelle couleur pour Bills
+          case 'Entertainment':
+            return { ...category, color: '#990092' }; // Nouvelle couleur pour Entertainment
+          case 'Shopping':
+            return { ...category, color: '#993000' }; // Nouvelle couleur pour Shopping
+          default:
+            return category;
+        }
+      });
+      setCategories(updatedCategories);
+    });
+  }, [auth]);
+
   return (
     <div aria-label='category-list' className="category-list">
       <h2>Categories</h2>

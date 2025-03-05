@@ -241,9 +241,58 @@ return (
 
 ## Clarification de l'identification du bouton de déconnexion
 Remplacement de la balise div par button pour améliorer la compréhension du contenu
-````
+```
 <button aria-label='button-logout' onClick={logout}>Logout</button>
-````
+```
+
+## Ajustement des couleurs et contrastes
+uniformisation des bleus
+![alt text](image-20.png)
+```
+.category-item,
+.payment-method-item {
+background-color:#00438F;
+color: white;
+border-radius: 8px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+```
+```
+.modal-body button[type="submit"] {
+  padding: 10px;
+  background-color: #00438F;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+```
+Modification des couleurs prédénies dans l'api pour les catégories des achats:
+```
+  useEffect(() => {
+    getCategories(auth).then(categories => {
+      // Modifier des couleurs pour 
+      const updatedCategories = categories.map(category => {
+        switch (category.name) {
+          case 'Food':
+            return { ...category, color: '#991900' }; // Nouvelle couleur pour Food
+          case 'Transport':
+            return { ...category, color: '#00660F' }; // Nouvelle couleur pour Transport
+          case 'Bills':
+            return { ...category, color: '#002BF5' }; // Nouvelle couleur pour Bills
+          case 'Entertainment':
+            return { ...category, color: '#990092' }; // Nouvelle couleur pour Entertainment
+          case 'Shopping':
+            return { ...category, color: '#993000' }; // Nouvelle couleur pour Shopping
+          default:
+            return category;
+        }
+      });
+      setCategories(updatedCategories);
+    });
+  }, [auth]);
+  ```
+  ![alt couleurs de catégories](image-21.png)
 
 ## Indicateurs de réussite
 
