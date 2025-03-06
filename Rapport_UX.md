@@ -1,6 +1,6 @@
 Un rapport d'UX complet détaillant les problèmes identifiés, les solutions proposées et les améliorations mises en place.
 
-## Domaines d'amélioration
+# Domaines d'amélioration
 
 ### 1. Problèmes d'authentification
 **Gravité : élevée**
@@ -26,6 +26,7 @@ setAuthLoading(false);
 
 }, [isLogin, username, password, login, register, setAuthLoading]);
 ```
+![alt text](image-22.png)
 ___
 
 ### 2. Flux de création de transaction
@@ -123,6 +124,7 @@ Amélioration de la visibilité des actions avec un hover sur les boutons:
   border: 2px solid black;
 }
 ```
+![alt text](image-25.png)
 
 Responsivité de la page de login : 
 ```
@@ -157,7 +159,7 @@ Ajustement du côté responsive de la navbar. Exemple:
   }
 }
 ```
-
+![alt text](image-24.png)
 Ajustement du côté responsive d'une transaction dans Modal.css :
 ```
 @media (max-width: 480px) {
@@ -176,6 +178,7 @@ Ajustement du côté responsive d'une transaction dans Modal.css :
   }
 }
 ```
+![alt text](image-23.png)
 
 Ajustement du côté responsive d'une mode de paiement :
 ```
@@ -200,8 +203,8 @@ TODO:
 - gérer l'authenfication avec un useAuth
 ___
 
-### Autres améliorations
-**Ajout d'aria-label**
+# Autres améliorations
+## Ajout d'aria-label
 
 Pour expliciter les div. Exemple :
 ````
